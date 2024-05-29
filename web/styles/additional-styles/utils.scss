@@ -1,0 +1,40 @@
+@use "variables" as v;
+
+@layer base {
+  :root {
+    --light: #{v.$light};
+    --light-foreground: black;
+
+    --dark: #{v.$dark};
+    --dark-foreground: v.$light;
+
+    --dark2: #{v.$dark2};
+    --dark2-foreground: v.$light;
+
+    --secondary: #{v.$secondary};
+    --secondary-foreground: black;
+
+    --secondary2: #{v.$secondary2};
+    --secondary2-foreground: v.$light;
+  }
+
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: v.$light;
+  }
+}
+
+@layer utilities {
+  .inspect {
+    border: red solid 1px;
+  }
+
+  .rtl {
+    direction: rtl;
+  }
+}

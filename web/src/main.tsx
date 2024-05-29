@@ -1,10 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "../layouts/App.tsx";
-import "../styles/index.scss";
+import Landing from "../layouts/Landing.tsx";
+import "../styles/globals.scss";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const rootElement = document.getElementById("root");
+
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <Landing />
+    </React.StrictMode>,
+  );
+} else {
+  console.error("Error: Root element is not found");
+}
