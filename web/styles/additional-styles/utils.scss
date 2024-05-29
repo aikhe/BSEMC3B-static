@@ -6,16 +6,16 @@
     --light-foreground: black;
 
     --dark: #{v.$dark};
-    --dark-foreground: v.$light;
+    --dark-foreground: ${v.$light};
 
     --dark2: #{v.$dark2};
-    --dark2-foreground: v.$light;
+    --dark2-foreground: ${v.$light};
 
     --secondary: #{v.$secondary};
-    --secondary-foreground: black;
+    --secondary-foreground: ${v.$light};
 
     --secondary2: #{v.$secondary2};
-    --secondary2-foreground: v.$light;
+    --secondary2-foreground: ${v.$light};
   }
 
   *,

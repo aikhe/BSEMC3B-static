@@ -9,14 +9,14 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: ".5rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1380px",
       },
     },
     extend: {
       letterSpacing: {
         tight: "-0.05em",
+        thick: ".2em",
       },
       fontFamily: {
         bruno: ["Bruno Ace"],
