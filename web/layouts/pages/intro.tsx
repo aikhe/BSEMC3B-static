@@ -6,21 +6,21 @@ const Intro = () => {
       </div>
 
       <section
-        className="font-montserrat container relative flex h-[130svh] w-full flex-col
-        items-end pt-14"
+        className="container relative flex h-[130svh] w-full flex-col items-end
+        pt-14 font-montserrat"
       >
         <div className="text-right">
-          <h3 className="text-headings tracking-headings font-medium">
+          <h3 className="text-headings font-medium tracking-headings">
             Simplify Motor Concepts
           </h3>
-          <p className="font-regular opacity-lighter tracking-base leading-base text-base">
+          <p className="text-base font-regular leading-base tracking-base opacity-lighter">
             Our guide makes understanding electric
             <br /> motors simple with clear explanations
             <br /> and practical examples.
           </p>
         </div>
 
-        <div className="absolute -left-[22%] bottom-[7.5%] flex gap-10">
+        <div className="absolute -left-[22%] bottom-[7.5%] flex w-full gap-10">
           <img src="/moving.svg" className="" alt="" />
           <img src="/moving.svg" className="" alt="" />
         </div>
