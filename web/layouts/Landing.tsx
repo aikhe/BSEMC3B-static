@@ -6,15 +6,27 @@ import SCTB from "./pages/SCTB";
 import STI from "./pages/STI";
 import { Footer } from "../components/footer";
 
+import TextVariations from "./drafts/text-variations";
+import ColorPallete from "./drafts/color-palette";
+import Components from "./drafts/components";
+
 const Landing = () => {
   return (
     <>
       <Header />
-      <Hero />
-      <Intro />
-      <About />
-      <SCTB />
-      <STI />
+
+      <main>
+        <Hero />
+        <Intro />
+        <About />
+        <SCTB />
+        <STI />
+
+        <TextVariations />
+        <ColorPallete />
+        <Components />
+      </main>
+
       <Footer />
     </>
   );
