@@ -2,8 +2,8 @@ const STI = () => {
   return (
     <>
       <section
-        className="bg-light container relative flex h-[120svh]
-        w-full items-center justify-center gap-[1.75rem]"
+        className="container relative flex h-[120svh] w-full
+        items-center justify-center gap-[1.75rem] bg-light"
       >
         <div className="-mt-24 h-[22.5rem] w-[16rem] bg-slate-600">
           <img
@@ -15,8 +15,8 @@ const STI = () => {
 
         <div className="relative h-[46rem] w-[30rem] bg-black text-center">
           <h3
-            className="font-upright text-headingsans tracking-headingsans absolute
-            -top-[9%] left-1/2 -translate-x-1/2 whitespace-nowrap text-center leading-[70%]"
+            className="absolute -top-[9%] left-1/2 -translate-x-1/2
+            whitespace-nowrap text-center font-upright text-headingsans leading-[70%] tracking-headingsans"
           >
             Thai Concept
           </h3>
@@ -28,17 +28,17 @@ const STI = () => {
             />
           </div>
           <div
-            className="text-light flex h-[12.5rem] w-full items-center justify-center
-            bg-[#7F8267]"
+            className="flex h-[12.5rem] w-full items-center justify-center bg-[#7F8267]
+            text-light"
           >
             <div className="-mt-6 flex flex-col items-start gap-4">
               <span
-                className="font-montserrat font-regular text-smol opacity-lighter
-                tracking-smol"
+                className="font-montserrat text-smol font-regular tracking-smol
+                opacity-lighter"
               >
                 05
               </span>
-              <p className="font-montserrat font-regular tracking-smol text-smol leading-[95%]">
+              <p className="font-montserrat text-smol font-regular leading-[95%] tracking-smol">
                 Motorcycles that are modified to
                 <br /> make them race-ready or street legal.
               </p>
@@ -53,18 +53,21 @@ const STI = () => {
         <div className="absolute bottom-[10rem] flex w-full justify-between">
           <div className="flex flex-col items-start gap-2">
             <h3
-              className="text-headings font-montserrat tracking-headings relative ml-8
-              font-medium"
+              className="relative ml-8 font-montserrat text-headings font-medium
+              tracking-headings"
             >
               Street
               <span
-                className="font-montserrat font-regular text-smol opacity-lighter
-                tracking-smol leadinre absolute -left-[30%] top-2"
+                className="leadinre absolute -left-[30%] top-2
+                font-montserrat text-smol font-regular tracking-smol opacity-lighter"
               >
                 06
               </span>
             </h3>
-            <p className="font-montserrat font-regularm tracking-smol text-smol leading-[95%]">
+            <p
+              className="font-montserrat text-smol font-regular leading-[95%]
+              tracking-smol"
+            >
               Lightened parts, heavily
               <br />
               modified, for racing use only.
@@ -74,18 +77,18 @@ const STI = () => {
 
           <div className="flex flex-col items-end gap-2">
             <h3
-              className="text-headings font-montserrat tracking-headings relative ml-8
-              font-medium"
+              className="relative ml-8 font-montserrat text-headings font-medium
+              tracking-headings"
             >
               Indo
               <span
-                className="font-montserrat font-regular text-smol opacity-lighter
-                tracking-smol leadinre absolute -left-[40%] top-2"
+                className="leadinre absolute -left-[40%] top-2
+                font-montserrat text-smol font-regular tracking-smol opacity-lighter"
               >
                 07
               </span>
             </h3>
-            <p className="font-montserrat font-regular tracking-smol text-smol text-end leading-[95%]">
+            <p className="text-end font-montserrat text-smol font-regular leading-[95%] tracking-smol">
               Intended for daily driving, heavily
               <br />
               related to looks, and commonly known for its
