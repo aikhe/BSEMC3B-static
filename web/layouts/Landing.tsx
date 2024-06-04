@@ -1,9 +1,9 @@
 import { Header } from "../components/header";
 import Hero from "./pages/hero";
-import Intro from "./pages/intro";
-import About from "./pages/about";
-import SCTB from "./pages/SCTB";
-import STI from "./pages/STI";
+// import Intro from "./pages/intro";
+// import About from "./pages/about";
+// import SCTB from "./pages/SCTB";
+// import STI from "./pages/STI";
 import { Footer } from "../components/footer";
 
 import TextVariations from "./drafts/text-variations";
@@ -17,10 +17,10 @@ const Landing = () => {
 
       <main>
         <Hero />
-        <Intro />
+        {/* <Intro />
         <About />
         <SCTB />
-        <STI />
+        <STI /> */}
 
         <TextVariations />
         <ColorPallete />

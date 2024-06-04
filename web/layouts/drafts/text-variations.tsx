@@ -1,6 +1,6 @@
 const TextVariations = () => {
   return (
-    <section className="container">
+    <section className="container mb-20">
       {/* <--- TITLE ---> */}
       <div className="flex justify-between">
         <h1
