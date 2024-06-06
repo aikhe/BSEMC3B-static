@@ -22,8 +22,8 @@ const Landing = () => {
         <SCTB />
         <STI />
 
-        <ColorPallete />
         <TextVariations />
+        <ColorPallete />
         <Components />
       </main>
 

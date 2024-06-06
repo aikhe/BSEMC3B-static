@@ -13,8 +13,12 @@ const menu = {
   },
 };
 
-export const Menu = () => {
-  const [isActive, setIsActive] = useState(false);
+interface MenuProps {
+  isOpen?: boolean;
+}
+
+export const Menu: React.FC<MenuProps> = ({ isOpen }) => {
+  const [isActive, setIsActive] = useState(isOpen ? true : false);
 
   return (
     <>
