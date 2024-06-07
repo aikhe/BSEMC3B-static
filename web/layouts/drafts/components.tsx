@@ -102,7 +102,7 @@ const Components = () => {
           </span>
         </h3>
 
-        <div className="mt-5 flex h-[33.5rem] w-[25rem] justify-end">
+        <div className="mt-5 flex h-[35.5rem] w-[25rem] justify-end">
           <Menu isOpen={true} />
         </div>
       </div>
