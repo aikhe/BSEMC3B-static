@@ -48,7 +48,10 @@ const SCTB = () => {
             </span>
           </h2>
         </div>
-        <div className="h-full w-full cursor-pointer bg-slate-600 duration-200 hover:scale-75">
+        <div
+          className="h-full w-full cursor-pointer bg-slate-600 duration-200
+          hover:scale-75 hover:opacity-80"
+        >
           <img
             src="/touring.png"
             className=" h-full w-full object-cover"
@@ -57,7 +60,10 @@ const SCTB = () => {
         </div>
 
         {/* COL 1 ROW 2 */}
-        <div className="h-full w-full cursor-pointer bg-slate-600 duration-200 hover:scale-75">
+        <div
+          className="h-full w-full cursor-pointer bg-slate-600 duration-200
+          hover:scale-75 hover:opacity-80"
+        >
           <img
             src="/classic.png"
             className=" h-full w-full object-cover"
@@ -82,7 +88,10 @@ const SCTB = () => {
         </div>
 
         {/* COL 2 ROW 2 */}
-        <div className="h-full w-full cursor-pointer bg-slate-600 duration-200 hover:scale-75">
+        <div
+          className="h-full w-full cursor-pointer bg-slate-600 duration-200
+          hover:scale-75 hover:opacity-80"
+        >
           <img
             src="/bigbike.png"
             className=" h-full w-full object-cover"
