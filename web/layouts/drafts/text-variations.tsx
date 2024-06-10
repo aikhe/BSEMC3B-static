@@ -20,11 +20,11 @@ const TextVariations = () => {
       {/* <--- HEADING ---> */}
       <div className="mt-24 flex justify-between text-left">
         <div className="flex flex-col gap-8">
-          <h3 className="leading-fit font-upright text-headingsans tracking-headingsans">
+          <h3 className="font-upright text-headingsans leading-fit tracking-headingsans">
             The Heading's
           </h3>
           <h3
-            className="leading-fit font-montserrat text-headings font-[475]
+            className="font-montserrat text-headings font-[475] leading-fit
             tracking-headings"
           >
             Another Heading's
@@ -34,14 +34,14 @@ const TextVariations = () => {
         {/* <--- SUB TITLE ---> */}
         <div className="flex flex-col gap-8 text-right">
           <h2
-            className="leading-fit font-montserrat text-subtitle font-medium
+            className="font-montserrat text-subtitle font-medium leading-fit
             tracking-subtitle"
           >
             SUB Title's
           </h2>
           <h2
-            className="leading-fit font-garamond text-subtitlesans font-semibold
-            italic tracking-subtitlesans"
+            className="font-garamond text-subtitlesans font-semibold italic
+            leading-fit tracking-subtitlesans"
           >
             SUB TITLE'S
           </h2>

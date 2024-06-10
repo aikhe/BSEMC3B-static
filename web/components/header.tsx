@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Burger } from "../components/ui/burger.tsx";
+import { Menu } from "../components/ui/menu.tsx";
 import { Logo } from "../components/ui/logo.tsx";
 
 export const Header = () => {
@@ -43,16 +43,16 @@ export const Header = () => {
   return (
     <>
       <header
-        className="thick:px-28 fixed z-50 flex h-[8.5rem] w-full items-center justify-between
-        px-[4.5rem]"
+        className="pointer-events-none fixed z-50 flex h-[8.5rem]
+        w-full items-center justify-between px-[4.5rem] thick:px-28"
       >
         {isVisible ? <Logo /> : <div></div>}
-        <Burger />
+        <Menu />
       </header>
 
       <nav
-        className="font-regular text-smol absolute grid h-[8.5rem] w-full
-          items-center justify-center"
+        className="absolute grid h-[8.5rem] w-full items-center justify-center
+        text-smol font-regular"
       >
         <ul className="z-50 flex gap-10">
           <li>

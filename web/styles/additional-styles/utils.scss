@@ -29,6 +29,18 @@
     overflow-x: hidden;
     // overflow: hidden;
   }
+
+  .test {
+    background: black;
+  }
+
+  .test:hover {
+    background: red;
+  }
+
+  .test:not(:hover) {
+    background: blue;
+  }
 }
 
 @layer utilities {
