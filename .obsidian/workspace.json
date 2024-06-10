@@ -1,0 +1,169 @@
+{
+  "main": {
+    "id": "4eebf9e2fea6727b",
+    "type": "split",
+    "children": [
+      {
+        "id": "fbc43a9fc3291f5f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "352fd6bfb6195e50",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bcd9939fe7c00f30",
+    "type": "split",
+    "children": [
+      {
+        "id": "c584e4b44efd530c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9ec97bd07f5a9a8e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d36c267e77d7c2ab",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cd64523a91a4be4e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f704055c1461715e",
+    "type": "split",
+    "children": [
+      {
+        "id": "ca918bb1feedbc99",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bbfaa1dfbd41382b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6f7ec50d95368cda",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f044082229024eee",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "3e87cec972ef940a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "352fd6bfb6195e50",
+  "lastOpenFiles": [
+    "web/node_modules/@motionone/utils/dist/noop.es.js",
+    "web/node_modules/@motionone/types/dist/MotionValue.es.js",
+    "web/node_modules/@motionone/types/dist/MotionValue.cjs.js",
+    "web/node_modules/@motionone/types/dist/size-index.js",
+    "web/node_modules/@motionone/types/dist/index.cjs.js",
+    "web/node_modules/@motionone/types/dist/index.es.js",
+    "web/node_modules/@motionone/types/lib/MotionValue.js.map",
+    "web/node_modules/@motionone/utils/types/velocity.d.ts.map",
+    "web/node_modules/@motionone/types/lib/MotionValue.js",
+    "web/node_modules/@motionone/types/lib/index.js.map",
+    "web/node_modules/@motionone/types/lib/index.js",
+    "web/node_modules/@motionone/utils/README.md",
+    "web/node_modules/@motionone/types/README.md",
+    "web/node_modules/hey-listen/README.md",
+    "web/node_modules/hey-listen/CHANGELOG.md",
+    "READ.md",
+    "README.md"
+  ]
+}

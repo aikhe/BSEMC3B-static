@@ -19,6 +19,7 @@ const Intro: React.FC = () => {
     const moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
     baseX.set(baseX.get() + moveBy);
+    console.log(baseX);
   });
 
   return (
@@ -47,8 +48,6 @@ const Intro: React.FC = () => {
           className="absolute bottom-[7.5%] flex w-full gap-10"
           style={{ x: transformX }}
         >
-          <img src="/moving.svg" className="" alt="" />
-          <img src="/moving.svg" className="" alt="" />
           <img src="/moving.svg" className="" alt="" />
           <img src="/moving.svg" className="" alt="" />
         </motion.div>
