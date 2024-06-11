@@ -9,13 +9,21 @@ import { useRef } from "react";
 const Intro: React.FC = () => {
   const textScroll = useRef<HTMLDivElement>(null);
 
-  const baseX = useMotionValue(0);
+  let baseX = useMotionValue(0);
   const transformX = useTransform(baseX, [0, 100], [0, 100], { clamp: false });
 
-  const directionFactor = useRef<number>(1);
+  const directionFactor = useRef<number>(-1);
   const baseVelocity = 300;
 
   useAnimationFrame((_, delta) => {
+    transformX.onChange((value) => {
+      if (value >= window.innerWidth) {
+        baseX.set(0);
+      } else if (value <= -window.innerWidth) {
+        baseX.set(0);
+      }
+    });
+
     const moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
     baseX.set(baseX.get() + moveBy);
@@ -45,11 +53,17 @@ const Intro: React.FC = () => {
 
         <motion.div
           ref={textScroll}
-          className="absolute bottom-[7.5%] flex w-full gap-10"
+          className="absolute bottom-[7.5%] w-full -translate-x-20 gap-10"
           style={{ x: transformX }}
         >
-          <img src="/moving.svg" className="" alt="" />
-          <img src="/moving.svg" className="" alt="" />
+          <div className="relative">
+            <img src="/moving.svg" alt="" />
+            <img
+              src="/moving.svg"
+              className="absolute left-[101%] top-0"
+              alt=""
+            />
+          </div>
         </motion.div>
       </section>
     </>
