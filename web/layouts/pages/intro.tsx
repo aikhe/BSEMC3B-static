@@ -13,13 +13,13 @@ const Intro: React.FC = () => {
   const transformX = useTransform(baseX, [0, 100], [0, 100], { clamp: false });
 
   const directionFactor = useRef<number>(-1);
-  const baseVelocity = 300;
+  const baseVelocity = 200;
+
+  const viewPortWidth = window.innerWidth;
 
   useAnimationFrame((_, delta) => {
     transformX.onChange((value) => {
-      if (value >= window.innerWidth) {
-        baseX.set(0);
-      } else if (value <= -window.innerWidth) {
+      if (value >= viewPortWidth || value <= viewPortWidth * -1) {
         baseX.set(0);
       }
     });
@@ -53,14 +53,15 @@ const Intro: React.FC = () => {
 
         <motion.div
           ref={textScroll}
-          className="absolute bottom-[7.5%] w-full -translate-x-20 gap-10"
+          className={`absolute bottom-[7.5%] w-full gap-10`}
           style={{ x: transformX }}
         >
           <div className="relative">
-            <img src="/moving.svg" alt="" />
+            <img src="/moving.svg" className="pr-2" alt="" />
             <img
               src="/moving.svg"
-              className="absolute left-[101%] top-0"
+              className={`absolute ${directionFactor.current >= 1 ? "right-[101%]" : "left-[101%]"}
+              top-0`}
               alt=""
             />
           </div>
