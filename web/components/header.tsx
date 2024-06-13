@@ -16,17 +16,14 @@ export const Header = () => {
     } else if (scrollTop < lastScrollTop) {
       setIsVisible(true);
     }
-
     setLastScrollTop(scrollTop);
 
     if (timeoutId) {
       clearTimeout(timeoutId);
     }
-
     const newTimeoutId = setTimeout(() => {
       setIsVisible(true);
     }, 2000);
-
     setTimeoutId(newTimeoutId);
   };
 

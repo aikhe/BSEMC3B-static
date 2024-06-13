@@ -3,11 +3,11 @@ import ReactDOM from "react-dom/client";
 import Landing from "../layouts/Landing.tsx";
 import "../styles/globals.scss";
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById("lenis-root");
 
 if (rootElement) {
-  const root = ReactDOM.createRoot(rootElement);
-  root.render(
+  const lenisRoot = ReactDOM.createRoot(rootElement);
+  lenisRoot.render(
     <React.StrictMode>
       <Landing />
     </React.StrictMode>,

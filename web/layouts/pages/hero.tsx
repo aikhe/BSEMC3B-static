@@ -1,31 +1,40 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(true);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [timeoutId, setTimeoutId] = useState<number | null>(null);
+
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+
+    if (scrollTop > 500 && scrollTop > lastScrollTop) {
+      setIsVisible(false);
+    } else if (scrollTop < lastScrollTop) {
+      setIsVisible(true);
+    }
+    setLastScrollTop(scrollTop);
+
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    const newTimeoutId = setTimeout(() => {
+      setIsVisible(true);
+    }, 2000);
+    setTimeoutId(newTimeoutId);
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsVisible(false);
-
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-
-      timeoutRef.current = setTimeout(() => {
-        setIsVisible(true);
-      }, 1500);
-    };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
+      if (timeoutId) {
+        clearTimeout(timeoutId);
       }
     };
-  }, []);
+  }, [lastScrollTop, timeoutId]);
 
   return (
     <>
@@ -38,31 +47,39 @@ const Hero = () => {
       text-center"
       >
         <div className="relative flex flex-col items-center justify-center gap-7 text-center">
-          <h1 className="font-montserrat text-title tracking-title font-light leading-[70%]">
+          <h1 className="font-montserrat text-title font-light leading-[70%] tracking-title">
             MOTOR CONCEPT’S
           </h1>
           <h1
-            className="font-unicase text-titlesans tracking-titlesans font-light
-          leading-[65%]"
+            className="font-unicase text-titlesans font-light leading-[65%]
+          tracking-titlesans"
           >
             MADE EASY
           </h1>
           <p
-            className="font-montserrat font-regular tracking-smol text-smol absolute -bottom-[55%]
-          mt-6 max-w-[40ch] leading-[95%]"
+            className="absolute -bottom-[55%] mt-6 max-w-[40ch] font-montserrat text-smol
+          font-regular leading-[95%] tracking-smol"
           >
             Comprehensive guides that clarify electric motors with detailed
             explanations. Ideal for professionals.
           </p>
         </div>
 
-        {isVisible && (
-          <img
-            src="/down.svg"
-            className="absolute bottom-6 size-12 animate-bounce"
-            alt=""
-          />
-        )}
+        <AnimatePresence>
+          {isVisible && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <img
+                src="/down.svg"
+                className="absolute bottom-6 size-12 animate-bounce"
+                alt=""
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </section>
     </>
   );
