@@ -5,29 +5,21 @@ import {
   motion,
 } from "framer-motion";
 import { useRef } from "react";
+import { wrap } from "@motionone/utils";
 
 const Intro: React.FC = () => {
   const textScroll = useRef<HTMLDivElement>(null);
 
   let baseX = useMotionValue(0);
-  const transformX = useTransform(baseX, [0, 100], [0, 100], { clamp: false });
+  const transformX = useTransform(baseX, (v) => `${wrap(0, 100, v)}%`);
 
   const directionFactor = useRef<number>(-1);
-  const baseVelocity = 200;
-
-  const viewPortWidth = window.innerWidth;
+  const baseVelocity = -20;
 
   useAnimationFrame((_, delta) => {
-    transformX.onChange((value) => {
-      if (value >= viewPortWidth || value <= viewPortWidth * -1) {
-        baseX.set(0);
-      }
-    });
-
     const moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
     baseX.set(baseX.get() + moveBy);
-    console.log(baseX);
   });
 
   return (
@@ -57,11 +49,10 @@ const Intro: React.FC = () => {
           style={{ x: transformX }}
         >
           <div className="relative">
-            <img src="/moving.svg" className="pr-2" alt="" />
+            <img src="/moving.svg" alt="" />
             <img
               src="/moving.svg"
-              className={`absolute ${directionFactor.current >= 1 ? "right-[101%]" : "left-[101%]"}
-              top-0`}
+              className="absolute right-[100%] top-0"
               alt=""
             />
           </div>
