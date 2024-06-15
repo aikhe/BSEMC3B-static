@@ -3,6 +3,9 @@ import {
   useTransform,
   useMotionValue,
   motion,
+  useScroll,
+  useVelocity,
+  useSpring,
 } from "framer-motion";
 import { useRef } from "react";
 import { wrap } from "@motionone/utils";
@@ -10,14 +13,33 @@ import { wrap } from "@motionone/utils";
 const Intro: React.FC = () => {
   const textScroll = useRef<HTMLDivElement>(null);
 
-  let baseX = useMotionValue(0);
+  const baseX = useMotionValue(0);
+
+  const { scrollY } = useScroll();
+  const scrollVelocity = useVelocity(scrollY);
+  const springVelocity = useSpring(scrollVelocity, {
+    damping: 40,
+    stiffness: 400,
+  });
+  const velocityFactor = useTransform(springVelocity, [0, 1000], [0, 5], {
+    clamp: false,
+  });
+
   const transformX = useTransform(baseX, (v) => `${wrap(0, 100, v)}%`);
 
   const directionFactor = useRef<number>(-1);
-  const baseVelocity = -20;
+  const baseVelocity = -5;
 
   useAnimationFrame((_, delta) => {
-    const moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+
+    if (velocityFactor.get() < 0) {
+      directionFactor.current = -1;
+    } else if (velocityFactor.get() > 0) {
+      directionFactor.current = 1;
+    }
+
+    moveBy += directionFactor.current * moveBy * velocityFactor.get();
 
     baseX.set(baseX.get() + moveBy);
   });
