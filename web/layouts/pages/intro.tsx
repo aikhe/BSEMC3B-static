@@ -19,7 +19,7 @@ const Intro: React.FC = () => {
   const scrollVelocity = useVelocity(scrollY);
   const springVelocity = useSpring(scrollVelocity, {
     damping: 40,
-    stiffness: 400,
+    stiffness: 340,
   });
   const velocityFactor = useTransform(springVelocity, [0, 1000], [0, 5], {
     clamp: false,
