@@ -9,7 +9,7 @@ const Hero = () => {
   const handleScroll = () => {
     const scrollTop = window.scrollY;
 
-    if (scrollTop > 500 && scrollTop > lastScrollTop) {
+    if (scrollTop > 340 && scrollTop > lastScrollTop) {
       setIsVisible(false);
     } else if (scrollTop < lastScrollTop) {
       setIsVisible(true);
