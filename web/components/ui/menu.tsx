@@ -21,7 +21,7 @@ interface MenuProps {
   isOpen?: boolean;
 }
 
-export const Menu: React.FC<MenuProps> = ({ isOpen = false }) => {
+export const Menu = ({ isOpen = false }: MenuProps) => {
   const [isActive, setIsActive] = useState(isOpen ? true : false);
 
   return (
