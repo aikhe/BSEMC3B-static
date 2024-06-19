@@ -80,6 +80,8 @@
 <br />
 
 - [x] Lenis scroll (for locomotive/smooth scroll)
+- [x] Parralax text
+	- [x] Directional & velocity scroll
 - [ ] BURGER
 - [ ] Button
 - [ ] Dropdown
